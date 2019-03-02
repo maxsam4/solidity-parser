@@ -6743,6 +6743,9 @@ function peg$parse(input, options) {
           peg$currPos = s3;
           s3 = peg$FAILED;
         }
+        if (s3 === peg$FAILED) {
+          s3 = peg$parseArrayLiteral();
+        }
       }
       while (s3 !== peg$FAILED) {
         s2.push(s3);
@@ -6832,6 +6835,9 @@ function peg$parse(input, options) {
           } else {
             peg$currPos = s3;
             s3 = peg$FAILED;
+          }
+          if (s3 === peg$FAILED) {
+            s3 = peg$parseArrayLiteral();
           }
         }
       }

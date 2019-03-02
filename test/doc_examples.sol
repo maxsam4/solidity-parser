@@ -588,6 +588,12 @@ contract payableAddress {
 	}
 }
 
+contract arrayInTupple {
+	function hello(bytes memory _world) public {
+		uint256[] memory yolo = abi.decode(_world, (uint256[]));
+	}
+}
+
 contract TestCalldataSpecifier {
   function set(string calldata _value) external {
     value = _value;
